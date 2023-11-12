@@ -80,6 +80,7 @@ input[type='radio'].visually-hidden {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .menu__link:hover,
@@ -96,6 +97,7 @@ input[type='radio'].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 }
 
 .user:hover,
@@ -149,6 +151,7 @@ input[type='radio'].visually-hidden {
 
 .slogan__img {
   position: relative;
+  width: 383px;
 }
 
 .slogan__img svg {
@@ -195,6 +198,7 @@ input[type='radio'].visually-hidden {
   font-weight: 600;
   line-height: normal;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .button:hover,
@@ -592,6 +596,7 @@ input[type='radio'].visually-hidden {
   justify-content: space-between;
   text-align: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .faq__button:hover {
@@ -661,6 +666,7 @@ input[type='radio'].visually-hidden {
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .footer__item:hover {
