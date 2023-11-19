@@ -2,11 +2,12 @@ body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
   background-color: #140e17;
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
   color: #fff;
+}
+
+*,
+*::before *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -33,7 +34,7 @@ input[type='radio'].visually-hidden {
 
 .container {
   max-width: 1020px;
-  margin: 60px auto;
+  margin: 80px auto;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -47,12 +48,16 @@ input[type='radio'].visually-hidden {
   padding: 18px 24px;
   gap: 40px;
   justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
 .container--fotter {
   margin-top: 0;
+}
+
+.logo img {
+  width: 191px;
+  height: 40px;
 }
 
 .menu__wrap {
@@ -105,6 +110,11 @@ input[type='radio'].visually-hidden {
   opacity: 0.7;
 }
 
+.user img {
+  width: 24px;
+  height: 24px;
+}
+
 .slogan {
   display: flex;
   flex-direction: column;
@@ -133,13 +143,17 @@ input[type='radio'].visually-hidden {
 }
 
 .slogan__svg--top {
-  right: 20px;
-  top: -17px;
+  width: 114px;
+  height: 64px;
+  right: 10px;
+  top: -7px;
 }
 
 .slogan__svg--botom {
+  width: 218px;
+  height: 26px;
   left: 60px;
-  bottom: 190px;
+  bottom: 170px;
 }
 
 .slogan__text {
@@ -151,13 +165,15 @@ input[type='radio'].visually-hidden {
 
 .slogan__img {
   position: relative;
-  width: 383px;
+  width: 412px;
 }
 
-.slogan__img svg {
+.slogan__icon {
   position: absolute;
-  top: -10px;
-  right: 20px;
+  width: 39px;
+  height: 39px;
+  top: -3px;
+  right: 44px;
 }
 
 .slogan__mail {
@@ -166,11 +182,12 @@ input[type='radio'].visually-hidden {
 }
 
 .slogan__input {
+  box-sizing: border-box;
+  border: none;
   width: 317px;
-  min-height: 61px;
+  padding: 18px 14px;
   border-radius: 18px;
   background: #fff;
-  padding-left: 14px;
   font-size: 18px;
   line-height: 110%;
 }
@@ -182,27 +199,31 @@ input[type='radio'].visually-hidden {
   line-height: normal;
 }
 
+.slogan__input:focus-visible {
+  outline: none;
+}
+
 .button__wrap {
   width: 222px;
-  min-height: 61px;
-  position: relative;
+  border-radius: 18px;
+  background: #f5fa93;
+  display: flex;
+  padding: 18px 14px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.5s;
+  box-sizing: border-box;
 }
 
 .button {
-  display: flex;
-  padding-left: 14px;
-  align-items: center;
-  border-radius: 18px;
-  background: #f5fa93;
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
-  cursor: pointer;
-  transition: 0.5s;
 }
 
-.button:hover,
-.button:focus {
+.button__wrap:hover a,
+.button__wrap:hover img {
   opacity: 0.7;
 }
 
@@ -212,10 +233,9 @@ input[type='radio'].visually-hidden {
   height: 100%;
 }
 
-.button__wrap svg {
-  position: absolute;
-  top: 24px;
-  right: 0;
+.button__wrap img {
+  height: 24px;
+  width: 24px;
 }
 
 .features__list {
@@ -233,18 +253,25 @@ input[type='radio'].visually-hidden {
   padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 23px;
   width: 250px;
-  min-height: 350px;
 }
 
-.features__item--center svg {
+.features__item img {
+  width: 68px;
+  height: 74px;
+}
+
+.features__item--center img {
   align-self: center;
+  width: 79px;
+  height: 75px;
 }
 
-.features__item--right svg {
+.features__item--right img {
   align-self: flex-end;
-  margin: 0;
+  width: 64px;
+  height: 69px;
 }
 
 .features__subtitle {
@@ -275,13 +302,19 @@ input[type='radio'].visually-hidden {
 }
 
 .author {
-  width: 585px;
+  width: 658px;
   display: flex;
   border-radius: 24px;
   border: 2px solid #333;
   background: #140e17;
-  padding: 29px 36px;
+  padding: 29px 72px;
   gap: 79px;
+  box-sizing: border-box;
+}
+
+.author img {
+  width: 182px;
+  height: 176px;
 }
 
 .work__user {
@@ -302,31 +335,40 @@ input[type='radio'].visually-hidden {
 
 .author__text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   font-size: 11px;
   line-height: 13px;
   width: 245px;
 }
 
 .button__wrap--mini {
-  min-height: auto;
-  width: 118px;
+  width: 105px;
+  border-radius: 8px;
+  background: #f9d69e;
+  display: flex;
+  padding: 8px 6px;
+  padding-left: 25px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+.button__wrap--mini:hover a,
+.button__wrap--mini:hover img {
+  opacity: 0.7;
 }
 
 .author__link {
-  border-radius: 8px;
-  background: #f9d69e;
   font-size: 8px;
   font-weight: 600;
-  padding: 8px 6px;
   color: #000;
-  justify-content: center;
 }
 
-.button__wrap--mini svg {
-  position: absolute;
-  top: 8px;
-  right: 10px;
+.button__wrap--mini img {
+  width: 11px;
+  height: 11px;
 }
 
 .experience {
@@ -386,16 +428,20 @@ input[type='radio'].visually-hidden {
 }
 
 .portfolio {
-  width: 178px;
+  width: 220px;
+  height: 430px;
   padding: 21px;
   border-radius: 21px;
   background: #ffafb0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .portfolio__wrap {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
   gap: 12px;
   color: #000;
 }
@@ -403,23 +449,18 @@ input[type='radio'].visually-hidden {
 .portfolio__subtitle {
   font-size: 28px;
   font-weight: 700;
-  line-height: 35px;
+  line-height: 128%;
   margin: 0;
 }
 
 .portfolio__text {
   font-size: 12px;
   font-weight: 500;
-  line-height: 17px;
+  line-height: 145%;
   margin: 0;
 }
 
-.button__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.portfolio__link {
+.button__wrap--portfolio {
   border-radius: 12px;
   border: 1px solid #333;
   background-color: inherit;
@@ -427,14 +468,18 @@ input[type='radio'].visually-hidden {
   justify-content: space-between;
   width: 118px;
   align-self: flex-end;
+  padding: 12px 9px;
 }
 
-.portfolio__link p {
+.button__wrap--portfolio img {
+  width: 15px;
+  height: 15px;
+}
+
+.portfolio__link {
   font-size: 12px;
   font-weight: 600;
   line-height: normal;
-  margin: 0;
-  padding: 12px 9px;
   color: #000;
 }
 
@@ -466,6 +511,11 @@ input[type='radio'].visually-hidden {
   border-radius: 18px;
   border: 1px solid #333;
   align-self: flex-end;
+  transition: 0.5s;
+}
+
+.work__link:hover {
+  opacity: 0.7;
 }
 
 .price__title {
@@ -497,6 +547,10 @@ input[type='radio'].visually-hidden {
   color: #000;
   gap: 18px;
   min-height: 448px;
+}
+
+.card--vip {
+  position: relative;
 }
 
 .card p {
@@ -546,6 +600,7 @@ input[type='radio'].visually-hidden {
 }
 
 .card__button {
+  width: 200px;
   align-self: flex-start;
   margin-top: auto;
   border-radius: 18px;
@@ -556,6 +611,32 @@ input[type='radio'].visually-hidden {
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  opacity: 0.8;
+}
+
+.card__aside {
+  border-radius: 18px;
+  border: 1px solid #333;
+  background: #000;
+  width: 150px;
+  padding: 13px 14px;
+  position: absolute;
+  box-sizing: border-box;
+  top: -30px;
+  right: 30px;
+}
+
+.card__aside p {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
 }
 
 .faq__title {
@@ -564,7 +645,7 @@ input[type='radio'].visually-hidden {
   font-weight: 600;
   line-height: 108%;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
   padding: 0 24px;
   text-transform: uppercase;
 }
@@ -581,22 +662,33 @@ input[type='radio'].visually-hidden {
 .faq__item {
   margin: 0;
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
   border-radius: 32px;
   border: 1px solid #333;
 }
 
 .faq__button {
-  background-color: inherit;
-  border: none;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 116%;
   cursor: pointer;
   transition: 0.5s;
+  list-style: none;
+  position: relative;
+}
+
+.faq__button::after {
+  content: '';
+  background-image: url(img/plus-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 0;
+}
+
+details[open] .faq__button::after {
+  background-image: url(img/minus-icon.svg);
 }
 
 .faq__button:hover {
@@ -604,6 +696,7 @@ input[type='radio'].visually-hidden {
 }
 
 .faq__text {
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -617,16 +710,10 @@ input[type='radio'].visually-hidden {
   line-height: 144%;
 }
 
-.minus--close,
-.plus--close,
-.faq__text--close {
-  display: none;
-}
-
 .footer__wrap {
   display: flex;
   flex-wrap: wrap;
-  padding: 60px 0;
+  padding: 50px 0;
   gap: 23px;
 }
 
@@ -640,8 +727,12 @@ input[type='radio'].visually-hidden {
   gap: 40px;
 }
 
-.footer__logo {
-  padding: 8px 4px;
+.footer__wrapper--social a {
+  transition: 0.5s;
+}
+
+.footer__wrapper--social a:hover {
+  opacity: 0.5;
 }
 
 .social {
