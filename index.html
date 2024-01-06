@@ -9,18 +9,19 @@
     rel="stylesheet">
   <link href="./normalize.css" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
+  <script src="./script.js" defer></script>
 </head>
 
-<body>
+<!>
   <header>
     <div class="container container--header">
 
       <!-- Открытие меню добовляет класс header__wrap--tablet -->
-      <div class="header__wrap header__wrap--tablet">
+      <div class="header__wrap">
         <div class="logo">
           <img src="./img/logo-top.svg" alt="логотип">
         </div>
-        <div class="menu__wrap menu__wrap--tablet">
+        <div class="menu__wrap">
           <menu class="menu menu--open">
             <ul class="menu__list">
               <li class="menu__item menu__item--user">
@@ -30,22 +31,22 @@
                 </a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">
+                <a href="#slogan" class="menu__link">
                   Что это?
                 </a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">
+                <a href="#features" class="menu__link">
                   Как это выглядит?
                 </a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">
+                <a href="#price" class="menu__link">
                   Сколько стоит?
                 </a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">
+                <a href="#faq" class="menu__link">
                   FAQ
                 </a>
               </li>
@@ -62,7 +63,7 @@
 
   <main>
     <div class="container">
-      <section class="slogan">
+      <section class="slogan" id="slogan">
         <div class="slogan__wrapper">
           <div class="slogan__wrap">
             <h1 class="slogan__title">
@@ -103,7 +104,7 @@
     </div>
 
     <div class="container">
-      <section class="features">
+      <section class="features" id="features">
         <ul class="features__list">
           <li class="features__item">
             <img src="./img/features-icon-1.svg" alt="иконка на фичах">
@@ -142,8 +143,6 @@
     <div class="container">
       <section class="work">
         <div class="work__wrap">
-
-
           <div class="work__user author">
             <picture>
               <source type="image/webp" srcset="./img/avatar-icon.webp, ./img/avatar-icon@2x.webp 2x">
@@ -242,7 +241,7 @@
     </div>
 
     <div class="container">
-      <section class="price">
+      <section class="price" id="price">
         <h3 class="price__title">
           тарифы
         </h3>
@@ -345,7 +344,7 @@
     </div>
 
     <div class="container">
-      <section class="faq">
+      <section class="faq" id="faq">
         <h3 class="faq__title">
           faq
         </h3>
@@ -558,6 +557,6 @@
     </button>
   </div>
 
-</body>
+</!>
 
 </html>

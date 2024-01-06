@@ -822,12 +822,12 @@ details[open] .faq__button::after {
     display: none;
   }
 
-  .header__wrap--tablet .menu__wrap--tablet {
-    display: block;
-  }
-
   .menu__wrap {
     display: none;
+  }
+
+  .header__wrap--tablet .menu__wrap {
+    display: block;
   }
 
   .menu {
